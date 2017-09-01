@@ -3,19 +3,18 @@ public class WeightCalculator
 
 		public static void main(String[] args)
 		{
-			double x = Double.parseDouble(args[0]);
-			double m = 0;
-			m = x * 0.38;
-			System.out.println("Mars: "+m);
-			double j = 0;
-			j = x * 2.36;
-			System.out.println("Jupiter: "+j);
-			double v = 0;
-			v = x * 0.91;
-			System.out.println("Venus: "+v);
-			double s = 0;
-			s = x * 1.06;
-			System.out.println("Saturn: "+s);
+			double weight = Double.parseDouble(args[0]);
+		
+			printPlanet(weight, 0.38, "Mars");
+			printPlanet(weight, 2.36, "Jupiter");
+			printPlanet(weight, 0.91, "Venus");
+			printPlanet(weight, 1.06, "Saturn");
+		}
+		public static void printPlanet( double earth, double factor, String planet)
+		{
+			double weight = earth * factor;
+			System.out.println(planet + ": " + weight);
+			
 		}
 
 }
